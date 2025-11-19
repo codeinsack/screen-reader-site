@@ -6,68 +6,95 @@
     <meta name="description" content="Screen Reader Extension - A Chrome extension that reads aloud text from Google Documents and web pages using text-to-speech technology">
     <title>Screen Reader Extension - Text-to-Speech for Google Documents</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #202124;
+            background-color: #ffffff;
         }
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
         }
         h1 {
             color: #1a73e8;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
             border-bottom: 3px solid #1a73e8;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
         }
         h2 {
             color: #202124;
+            font-size: 1.5em;
             margin-top: 30px;
             margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .purpose-box {
+            background: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .purpose-box strong {
+            color: #1a73e8;
+            font-size: 1.1em;
         }
         .feature-list {
             background: #f8f9fa;
             padding: 20px;
-            border-left: 4px solid #1a73e8;
             margin: 20px 0;
+            border-radius: 4px;
         }
         .feature-list ul {
-            margin: 10px 0;
-            padding-left: 25px;
+            margin: 10px 0 10px 25px;
         }
         .feature-list li {
-            margin: 8px 0;
+            margin: 10px 0;
+            font-size: 1.05em;
+        }
+        .permission-explanation {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .permission-explanation strong {
+            color: #856404;
+        }
+        .privacy-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
         }
         .privacy-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
+            padding: 15px 30px;
             background: #1a73e8;
             color: white;
             text-decoration: none;
             border-radius: 4px;
+            font-size: 1.2em;
             font-weight: 500;
             transition: background 0.3s;
         }
         .privacy-link:hover {
             background: #1557b0;
         }
-        .permission-box {
-            background: #e8f0fe;
-            border: 1px solid #1a73e8;
-            padding: 20px;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-        .permission-box strong {
-            color: #1a73e8;
+        strong {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -75,56 +102,57 @@
     <div class="container">
         <h1>Screen Reader Extension</h1>
         
-        <h2>About This Extension</h2>
-        <p>
-            <strong>Screen Reader Extension</strong> is a Google Chrome browser extension designed to make digital content more accessible by reading text aloud using advanced text-to-speech (TTS) technology. This extension helps users who prefer audio content, have reading difficulties, or need hands-free text consumption.
-        </p>
+        <div class="purpose-box">
+            <p>
+                <strong>Screen Reader Extension</strong> is a Google Chrome browser extension that makes digital content accessible by reading text aloud using text-to-speech technology. This extension helps users consume content through audio, making it ideal for people with visual impairments, reading difficulties, or those who prefer audio content.
+            </p>
+        </div>
         
-        <h2>Purpose and Functionality</h2>
+        <h2>What This Extension Does</h2>
         <p>
-            The primary purpose of this extension is to provide an accessible reading experience by converting on-screen text into spoken words. The extension reads text content from web pages and Google Documents, making digital documents accessible through audio playback.
+            The Screen Reader Extension converts on-screen text into spoken words, allowing users to listen to content instead of reading it. The extension works with web pages and Google Documents, providing a seamless audio reading experience.
         </p>
         
         <div class="feature-list">
             <strong>Key Features:</strong>
             <ul>
-                <li>Reads text aloud from Google Documents using natural-sounding voices</li>
-                <li>Reads content from web pages you visit</li>
-                <li>Provides control over playback (play, pause, stop)</li>
-                <li>Supports multiple languages</li>
-                <li>Adjustable reading speed and voice selection</li>
-                <li>Enhances accessibility for users with visual impairments or reading difficulties</li>
+                <li>Reads text aloud from Google Documents</li>
+                <li>Reads content from web pages</li>
+                <li>Provides playback controls (play, pause, stop)</li>
+                <li>Supports multiple languages and voices</li>
+                <li>Adjustable reading speed</li>
+                <li>Enhances accessibility for users with disabilities</li>
             </ul>
         </div>
         
-        <h2>Why We Need Google Documents Access</h2>
-        <div class="permission-box">
+        <h2>Why We Need Access to Google Documents</h2>
+        <div class="permission-explanation">
             <p>
-                This extension requests the <strong>https://www.googleapis.com/auth/documents.readonly</strong> permission to:
+                This extension requires the <strong>https://www.googleapis.com/auth/documents.readonly</strong> permission to function properly. Here's why:
             </p>
-            <ul>
-                <li>Read the text content from your Google Documents</li>
-                <li>Convert the document text into speech for audio playback</li>
-                <li>Provide an accessible reading experience without requiring you to copy-paste text manually</li>
+            <ul style="margin-left: 25px; margin-top: 10px;">
+                <li>To read the text content from your Google Documents</li>
+                <li>To convert document text into speech for audio playback</li>
+                <li>To provide an accessible reading experience without requiring manual text copying</li>
             </ul>
-            <p>
-                <strong>Important:</strong> The extension uses a <strong>read-only</strong> scope, which means it can only read your document content. It cannot modify, delete, or share your documents. Your documents remain completely private and secure.
+            <p style="margin-top: 15px;">
+                <strong>Important:</strong> The extension uses a read-only scope, meaning it can only read document content. It cannot modify, delete, or share your documents. All processing happens locally in your browser, and no document data is stored or transmitted to external servers.
             </p>
         </div>
         
-        <h2>How It Works</h2>
+        <h2>How to Use</h2>
         <p>
-            When you open a Google Document, the extension detects the document content and offers to read it aloud. You can control the reading experience through the extension's interface, including play, pause, and stop controls. The extension uses your browser's built-in text-to-speech capabilities to convert text into natural-sounding speech.
+            After installing the extension, simply open any Google Document. The extension will detect the document content and provide options to read it aloud. Use the extension's controls to play, pause, or stop the reading at any time.
         </p>
         
-        <h2>Privacy and Security</h2>
+        <h2>Privacy and Data Usage</h2>
         <p>
-            We take your privacy seriously. The extension only accesses the text content necessary for reading aloud. No data is stored, transmitted to external servers, or shared with third parties. All processing happens locally in your browser.
+            We are committed to protecting your privacy. The extension only accesses text content necessary for the reading functionality. No data is stored on our servers, shared with third parties, or used for any purpose other than providing the text-to-speech service. All text processing occurs locally in your browser.
         </p>
         
-        <div style="text-align: center;">
+        <div class="privacy-section">
             <a href="https://screenreader.online/privacy" class="privacy-link">
-                View Privacy Policy
+                Privacy Policy
             </a>
         </div>
     </div>
