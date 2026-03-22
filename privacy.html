@@ -1,163 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy – Screen Reader</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 40px auto;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1, h2 {
-            color: #222;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Read Aloud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #050510;
+      --text: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --accent-blue: #00d4ff;
+      --card-border: rgba(255, 255, 255, 0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg-deep);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .cosmos {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 100% 70% at 50% -10%, rgba(192, 38, 211, 0.25), transparent 50%),
+        linear-gradient(180deg, #0a0618 0%, var(--bg-deep) 50%, #12081f 100%);
+    }
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.6;
+      background-image:
+        radial-gradient(1px 1px at 30% 20%, #fff, transparent),
+        radial-gradient(1px 1px at 70% 60%, #fff, transparent);
+      background-size: 200% 200%;
+    }
+    .wrap {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+    }
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0 0 1.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    p {
+      margin: 0 0 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+    ul {
+      margin: 0 0 0.75rem;
+      padding-left: 1.35rem;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+    li {
+      margin: 0.35rem 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--card-border);
+      margin: 1.5rem 0;
+    }
+    code {
+      font-size: 0.88em;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
+  <div class="cosmos" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="muted"><strong>Last Updated: March 22, 2026</strong></p>
 
-<h1>Privacy Policy</h1>
-<p><strong>Last Updated: 29.10.2025</strong></p>
+    <p>This Privacy Policy explains what information the <strong>Read Aloud</strong> (“we,” “us,” “our”) collects, how we use it, and how we protect it. By using the extension, you agree to the practices described in this policy.</p>
 
-<p>
-This Privacy Policy (“Policy”) explains the information collection, use, and sharing practices of 
-<strong>Screen Reader</strong> (“we,” “us,” and “our”).
-Unless otherwise stated, this Policy describes and governs the information collection, use, and sharing practices of 
-Screen Reader with respect to your use of our services (“Services”) we provide and/or host on our servers.
-</p>
+    <hr>
 
-<p>
-By using any part of the Services, you agree that your information will be collected, used, and disclosed as outlined in this Policy.
-If you do not agree to this Privacy Policy, please do not use our Services.
-</p>
+    <h2>1. What We Collect</h2>
 
-<h2>Our Principles</h2>
-<ul>
-    <li>Privacy policies should be human-readable and easy to find.</li>
-    <li>Data collection, storage, and processing should be simplified to enhance security and consistency.</li>
-    <li>Data practices should meet the reasonable expectations of users.</li>
-</ul>
+    <h3>1.1 Account Information (Google Sign-In)</h3>
+    <p>When you sign in with Google, we receive from Google:</p>
+    <ul>
+      <li>Email address</li>
+      <li>Full name (first name, last name)</li>
+      <li>Profile picture URL</li>
+    </ul>
+    <p>We use this solely to identify your account and provide the service.</p>
 
-<h2>Information We Collect</h2>
-<p>We collect information in multiple ways, including when you provide information directly to us, when we passively collect information from your browser or device, and from third parties.</p>
+    <h3>1.2 Usage Statistics</h3>
+    <p>We collect anonymous usage counters to understand how the service is used:</p>
+    <ul>
+      <li>Number of characters converted to speech (per voice)</li>
+      <li>Counts of actions you perform: reading the full page, reading selected text, pasting text, uploading a PDF</li>
+    </ul>
+    <p>We do <strong>not</strong> store the text you read or listen to. Text is sent to our server only to generate audio and is discarded immediately after.</p>
 
-<h3>Information You Provide Directly to Us</h3>
-<p>
-We will collect any information you provide to us. This may include: your name, email address, phone number, mailing address, payment information, geographic location, or any other information you provide voluntarily.
-</p>
+    <h3>1.3 Account Activity Dates</h3>
+    <p>We store the following timestamps on your account:</p>
+    <ul>
+      <li>Account creation date</li>
+      <li>Last login date</li>
+      <li>Last activity date</li>
+      <li>Extension uninstall date (if you remove the extension)</li>
+      <li>Extension reinstall date (if you return after uninstalling)</li>
+    </ul>
 
-<h3>Information That Is Automatically Collected</h3>
-<p><strong>Device / Usage Information</strong></p>
-<p>
-We may automatically collect information about the devices you use to access the Services, including IP address, browser type, operating system, device identifiers, location (city/country), referring and exit pages, usage statistics, pages viewed, time spent, frequency of use, and error logs.
-</p>
+    <h3>1.4 Local Settings (stored only on your device)</h3>
+    <p>The following preferences are stored locally in your browser via <code>chrome.storage.local</code> and are never sent to our servers:</p>
+    <ul>
+      <li>Selected voice</li>
+      <li>Playback speed</li>
+      <li>Interface language</li>
+      <li>Auto-detect language setting</li>
+    </ul>
 
-<p><strong>Cookies and Other Tracking Technologies</strong></p>
-<p>
-We use cookies, tracking pixels, and web server logs to analyze usage, enhance user experience, and perform analytics.
-You may disable cookies in your browser settings, but doing so may affect your experience with the Services.
-</p>
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Provide and operate the text-to-speech service</li>
+      <li>Maintain your account and session</li>
+      <li>Track usage limits (e.g., character quotas)</li>
+      <li>Improve the extension based on aggregate usage patterns</li>
+      <li>Comply with legal obligations</li>
+    </ul>
 
-<h3>Information from Third Parties</h3>
-<p>
-To the extent permitted by law, we may collect information from public sources, social media platforms, and third-party data providers. This may include contact information, demographic data, employer details, or identity verification information.
-</p>
+    <h2>3. Text You Submit</h2>
+    <p>Text you submit for speech synthesis (typed, pasted, selected, or extracted from a page) is sent to our server to generate audio. <strong>We do not store, log, or analyze the content of this text.</strong> It is processed in memory and discarded immediately after the audio is returned.</p>
 
-<h2>How We Use Your Information</h2>
-<ul>
-    <li>To fulfill the purposes for which it was provided.</li>
-    <li>To provide, maintain, and improve the Services.</li>
-    <li>For customer support and communications.</li>
-    <li>To process donations or transactions.</li>
-    <li>To conduct analytics and research.</li>
-    <li>To comply with law and protect the security of users.</li>
-    <li>To enforce our Terms of Use.</li>
-</ul>
+    <h2>4. Cookies and Sessions</h2>
+    <p>We use a single session cookie to keep you logged in after you authenticate with Google. This cookie:</p>
+    <ul>
+      <li>Is stored in your browser</li>
+      <li>Is required for the service to function</li>
+      <li>Is cleared when you log out</li>
+    </ul>
+    <p>We do not use marketing cookies, tracking pixels, or third-party analytics.</p>
 
-<p>
-We may combine information collected from different sources and may use aggregated or de-identified data for any purpose.
-</p>
+    <h2>5. Data Sharing</h2>
+    <p>We do not sell your personal data. We do not share your information with third parties except:</p>
+    <ul>
+      <li><strong>Service infrastructure</strong>: our server is hosted on Railway (railway.app). Your data passes through their infrastructure subject to their privacy policy.</li>
+      <li><strong>Google OAuth</strong>: we use Google Sign-In for authentication. Google’s data practices are governed by <a href="https://policies.google.com/privacy" rel="noopener">Google’s Privacy Policy</a>.</li>
+      <li><strong>Legal requirements</strong>: if required to do so by law or to protect our rights.</li>
+    </ul>
 
-<h2>When We Disclose Your Information</h2>
-<ul>
-    <li><strong>Service Providers:</strong> Vendors performing services on our behalf.</li>
-    <li><strong>Legal Compliance:</strong> When required by law or needed to protect our rights or users.</li>
-    <li><strong>Business Transfers:</strong> In connection with mergers or acquisitions.</li>
-    <li><strong>Affiliated Companies:</strong> Current or future affiliates.</li>
-    <li><strong>Consent:</strong> With your permission.</li>
-    <li><strong>Aggregated/De-identified Data:</strong> May be shared with third parties.</li>
-</ul>
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li>Account data is retained as long as your account is active.</li>
+      <li>You may request deletion of your account and all associated data at any time by contacting us at <strong>codeinsack@gmail.com</strong>.</li>
+      <li>Local settings stored in your browser can be cleared by removing the extension.</li>
+    </ul>
 
-<h2>Legal Basis for Processing</h2>
-<ul>
-    <li><strong>Contractual Commitments</strong></li>
-    <li><strong>Legitimate Interests</strong></li>
-    <li><strong>Legal Compliance</strong></li>
-    <li><strong>Consent</strong></li>
-</ul>
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction or deletion of your data</li>
+      <li>Object to or restrict processing of your data</li>
+      <li>Withdraw consent at any time</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:codeinsack@gmail.com">codeinsack@gmail.com</a>.</p>
 
-<h2>Online Analytics</h2>
-<p>
-We may use third-party analytics services, such as Google Analytics, to collect and analyze usage data.
-You may opt out by installing the Google Analytics Opt-out Browser Add-on.
-</p>
+    <h2>8. Children</h2>
+    <p>The extension is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
 
-<h2>Your Choices and Rights</h2>
+    <h2>9. Security</h2>
+    <p>We implement technical and organizational measures to protect your data, including encrypted connections (HTTPS) and secure session management. No method of transmission over the internet is 100% secure, but we take reasonable steps to protect your information.</p>
 
-<h3>Email Unsubscribe</h3>
-<p>You may unsubscribe from marketing emails at any time by emailing <strong>codeinsack@gmail.com</strong>.</p>
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The “Last Updated” date at the top of this page will reflect any changes. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
 
-<h3>Account Preferences</h3>
-<p>If your Services include an account, you may update your settings within the platform.</p>
+    <h2>11. Contact</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+    <p><strong><a href="mailto:codeinsack@gmail.com">codeinsack@gmail.com</a></strong></p>
 
-<h3>EU Data Subject Rights</h3>
-<p>
-You may request access, correction, deletion, restriction, objection, or data portability as permitted by law.
-Submit requests to <strong>codeinsack@gmail.com</strong>.
-</p>
-
-<h2>International Transfers</h2>
-<p>
-Some data may be processed outside your country of residence. We take steps to ensure adequate protection for international transfers.
-</p>
-
-<h2>Security Measures</h2>
-<p>
-We implement technical and organizational measures to protect your information but cannot guarantee complete security of transmissions.
-</p>
-
-<h2>Children</h2>
-<p>
-The Services are not directed to children under 13 (or 16 in the EU). If we learn that we collected such data, we will delete it promptly.
-</p>
-
-<h2>Data Retention</h2>
-<p>
-We retain information as long as necessary to fulfill the purposes outlined here or as required by law.
-</p>
-
-<h2>Third-Party Links and Services</h2>
-<p>
-Our Services may contain links to third-party sites. We are not responsible for their content or privacy practices.
-</p>
-
-<h2>Changes to This Privacy Policy</h2>
-<p>
-We may update this Policy over time. Changes will be posted here with a new “Last Updated” date.
-</p>
-
-<h2>Questions</h2>
-<p>
-If you have any questions, contact us at:<br>
-<strong>codeinsack@gmail.com</strong>
-</p>
-
+    <a class="back" href="index.html">← Back to home</a>
+  </div>
 </body>
 </html>
